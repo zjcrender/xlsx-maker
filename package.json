@@ -1,0 +1,24 @@
+{
+  "name": "xlsx-maker",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "render",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zjcrender/xlsx-maker.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "prepublish": "npm run build"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "better-xlsx": "^0.7.4",
+    "file-saver": "^2.0.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}

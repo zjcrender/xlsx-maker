@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../dist/json2xlsx.min.js"></script>
+</head>
+<body>
+<script>
+  const data = [
+    {Category: 'Auto1', Budget: 100, Actual: 400, },
+    {Category: 'Auto2', Budget: 200, Actual: 300, },
+    {Category: 'Auto3', Budget: 300, Actual: 200, },
+    {Category: 'Auto4', Budget: 400, Actual: 100, },
+  ];
+  json2xlsx({
+    data,
+    filename: 'demo',
+    headers: ['Category', 'Budget', 'Actual', 'Difference'],
+    format: {
+      Difference: (row, key) => row.Actual - row.Budget
+    }
+  })
+</script>
+</body>
+</html>
